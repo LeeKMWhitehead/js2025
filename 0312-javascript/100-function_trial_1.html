@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- syntax error: 구문 오류는 컴퓨터 과학 분야에서 특정한 프로그래밍 언어에서
+ 쓰이도록 고안된 일련의 문자열이나 문자 블록의 구문 속의 오류를 가리킨다.
+ 컴파일하는 동안 구문 오류가 일어나면 소스 코드가 성공적으로 컴파일할 수 있게 코드를 고쳐야 한다. -->
+<body>
+    <script>
+        // 1 - 매개변수에 함수를 호출하여 해당 함수 안에서 실행시키는 로직 : 콜백함수
+        function func1_1(a, func1){
+            var x =a; // step 2 => x=3;
+            var y= func1(2,3); // step 3 => y=6
+            // y=func1(2,3)
+            return x+y; // step 5 => 3+6
+        }
+
+        function func1_2(a, b){
+            return a*b; // step 4
+        }
+
+        var val1 = func1_1(3, func1_2); // 실행순서 step 1
+        console.log(val1);
+        //정답은?=9
+    </script>
+</body>
+</html>

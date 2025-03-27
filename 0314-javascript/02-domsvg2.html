@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마사회에서 의뢰한 예제</title>
+    <style>
+        svg{
+            border: 1px solid #ccc;
+            background-color: #f0f0f0;
+            margin: 20px auto;
+        }
+        body{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 마사회에서 의뢰한 내용 -->
+    <h1>animate example</h1>
+    <svg id="my-svg" width="500" height="200">
+        <circle id="my-circle" cx="50" cy="100" r="20" fill="red"/>
+    </svg>
+    <button id="exec">애니메이션 실행</button>
+    <button id="cancel">애니메이션 취소</button>
+
+    <script>
+        // preparations - circle dom, svg width, x-axis location
+        const circle = document.getElementById("my-circle");
+        const svgWidth = 500;
+        let posX = 50;
+
+        // requetAnimationFrame storaging function
+        let animId;
+
+        // animation에서 쓰일 이벤트의 상세 내용을 함수 형태로 정의한다.
+        function animate(){            
+            posX += 1;
+            if(posX > svgWidth){
+                posX = 50;
+            }
+            circle.setAttribute("cx", posX);
+        
+        
+        // next frame reservation and ID update
+        animId = requestAnimationFrame(animate);
+    }
+
+        // animation event를 실행시킬 버튼의 이벤트를 정의한다.
+        document.getElementById("exec").addEventListener("click", function(){
+            animId = requestAnimationFrame(animate);
+        });
+
+        // animation event를 취소시킬 버튼의 이벤트를 정의한다.
+        document.getElementById("cancel").addEventListener("click", function(){
+            cancelAnimationFrame(animId);
+        });
+    </script>
+
+</body>
+</html>

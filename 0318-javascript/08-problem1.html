@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제1: 텍스트 내용 변경하기</title>
+</head>
+<body>
+<!-- ### 문제 1: 텍스트 내용 변경하기
+텍스트 내용 변경하기 - 문제 개요: HTML 요소의 텍스트를 JavaScript로 바꾸는 연습입니다.
+- 문제 설명: 지정된 `<div>` 요소에 들어있는 텍스트를 다른 문자열로 변경합니다.
+    - 구체적인 요구사항:   - HTML 파일에 `<div id="myText">원래 텍스트</div>`가 존재합니다.
+    - JavaScript를 통해 `myText` 요소의 내용이 `"Hello DOM!"`으로 변경되도록 코드를 작성하세요.
+- 힌트: `document.getElementById`와 `textContent` 또는 `innerText` 속성을 활용하세요.  -->
+</body>
+<div id="myText">원래 텍스트. 세상은 넓고 할 일은 많다고.</div>
+<script>
+    // div#myText의 텍스트를 "Hello DOM!"으로 변경
+    document.getElementById("myText").textContent = "Hello DOM!";
+
+</script>
+</html>

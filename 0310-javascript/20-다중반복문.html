@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2행 1열 테이블</title>
+</head>
+<body>
+    <script>
+        var i,j;
+        loop1:
+        for (i=0; i<3; i++){
+            loop2:
+            for(j=0; j<3; j++){
+                if (i===1 && j ===1){
+                    continue loop1;
+                }
+                console.log('i='+i+', j='+j);
+            }
+        }
+    </script>
+</body>
+</html>

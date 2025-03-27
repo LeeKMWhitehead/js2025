@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相續4</title>
+</head>
+<body>
+    <script>
+        // 오버라이딩
+        // - 부모 클래스의 특정 메서드의 기능을 자식 클래스에서 덮어쓰는 것을 말함
+        // - 자식 클래스의기능은 부모 클래스의 기능보다 우선권을 가지며 실행 시
+        // 부모 클래스의 기능의 실행 대신 자식 클래스의 기능이 실행 됨.
+        // 기능에 대한 재사용 시 일부 기능을 고쳐 쓰고자 할 경우 유용함.
+        // 참고
+        // - this : 나 자신의 기능 혹은 속성을 참조할 때 접근 가능한 접근자.
+        // - super : 나 이외의 부모의 기능 혹은 속성을 참조할 때 접근 가능한 접근자.
+
+
+        class SuperClass1{
+            superMethod1(){
+                console.log("이것은 부모 클래스의 superMethod1");
+            }
+        }
+// 부모의 기능 superMethod1을 덮어써버린다. overridig이라고 부름. 기존에 있던 부모의 기능을 다시 정의함. 새로운 하이브리드 차가 나왔을 때 기존 가솔린 엔진을 그래도 쓸 수 있어. 엔진이라는 기능은 있어야 하는데.
+        class ChildClass1 extends SuperClass1{
+            superMethod1(){
+                console.log("이것은 자식 클래스의 superMethod1");
+            }
+            superMethod2(){
+                super.superMethod1();
+                console.log("추가 선언된 기능");
+            }
+        }
+
+        const obj1 = new ChildClass1();
+        obj1.superMethod1();
+        obj1.superMethod2();
+        // 기존의 가솔린엔진에서 하이브리드엔진으로 교체를 하는데 하이브리드엔진 역시 가솔린 기능이 있다. 그래서 완전히 개변하기보다는 부분 수정해서 사용하는 것이 더 효율적일때가 있다. super써서 사용하는 거 말함.
+    </script>
+</body>
+</html>

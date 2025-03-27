@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 상에서 키보드로 발생하는 이벤트 처리</title>
+</head>
+<body>
+    <!-- 웹 상에서 키보드로 발생하는 이벤트 처리하는 방법 -->
+
+    <script>
+        document.addEventListener("keydown", function(e){
+            // console.dir(e);
+            // HTML4까지 적용
+            // if(e.keyCode === 13){
+            //     alert("엔터키 누름");
+            // }
+
+            // HTML5부터
+            // if(e.key === "Enter") {
+            //     alert("엔터키 누름");
+            // }
+            // console.log(e.jey);
+            console.log(e.keyCode);
+        });
+
+
+    </script>
+</body>
+</html>

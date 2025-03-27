@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Что это jQuery?</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <script>
+        // load: 웹 페이지에서 적용하고자 하는 모든 태그들을 다 읽어서 준비해두라는 명령어, 스크립트 강제로 동기화. 스크립트가 상하위치에 관계없이 사용할 수 있도록
+        // 웹 페이지의 모든 태그 및 리소스가 전부 로드가 되면 실행
+        // - 이 리소스에는 오디오나 비디오와 같은 큰 리소스도 포함
+        // - 아래의 h1이 예가 됨
+        window.addEventListener("load", function(){
+        });
+        // 그래서
+        // DOMContentsLoaded : 웹 페이지의 모든 태그가 로드가 되면 실행
+        // - 그림, 영상, 오디오과 같은 외부 리소스는 제외
+        // window.addEventListener("DOMContentsLoaded", function(){
+        //     document.getElementById("h1").style.color = "red";
+        // })
+        // 1.0 초창기 베타 막 벗어난 시절 문법
+        // jQuery(document).ready(function(){
+        //     $("#h1").css({color:"red"});
+        // });
+        // 1.0 중반기 이제 막 릴리즈 되던 시점
+        // $(document).ready(function(){
+        //     $("#h1").css({color: "red"});
+        // })
+        // 위의 코드도 길다고 극단적으로 더 줄임
+        // 1.0 후반기 2.0 넘어가기 전 극단적인 줄임 세력에 의해 완성된 jquery
+        
+        $(function(){
+            $("#h1").css({color: "green" });
+        })
+        
+    </script>
+    <h1 id="h1">안녕하세요?</h1>
+</body>
+</html>

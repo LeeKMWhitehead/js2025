@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//Math.random()에서 처럼 Math가 class고, random이 Sample1이다.
+class Sample1{
+    static distance(a,b){
+        return Math.abs(a-b);
+    }
+}
+
+console.log(Sample1.distance(1,2));
+document.write(Sample1.distance(100,2));
+
+class Whitehead1{
+    static distance(a,b){
+        return Math.abs(a-b);
+    }
+}
+document.write("<br>");
+console.log(Whitehead1.distance(100,50));
+document.write(Whitehead1.distance(100,2));
+
+
+class whitehead1{
+    static distance(a,b){
+        return Math.abs(a-b);
+    }
+}
+document.write("<br>");
+console.log(whitehead1.distance(100,50));
+document.write(whitehead1.distance(100,2));
+
+    </script>
+</body>
+</html>

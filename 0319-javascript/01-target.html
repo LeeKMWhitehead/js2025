@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click event와 target, e.target 이해하기</title>
+    <style>
+        .div{
+            font-size: 10px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="div" id="div1">"언어는 존재의 집이다. Die Sprache ist das Haus des Seins."</div>
+    <script>
+        document.getElementById("div1").addEventListener("click", function(a){
+            a.target.style.backgroundColor = "lightblue";
+            console.log(a);
+        });
+        // document.getElementById("div1").addEventListener("click", function(b){
+        //     b.target.style.backgroundColor = "lightblue";
+        //     console.log(b);
+        // });
+        // document.getElementById("div1").addEventListener("click", function(c){
+        //     c.target.style.backgroundColor = "lightblue";
+        //     console.log(c);
+        // });
+        // document.getElementById("div1").addEventListener("click", function(d){
+        //     d.target.style.backgroundColor = "lightblue";
+        //     console.log(d);
+        // });
+        // document.getElementById("div1").addEventListener("click", function(e){
+        //     e.target.style.backgroundColor = "lightblue";
+        //     console.log(e);
+        // });
+        // document.getElementById("div1").addEventListener("click", function(f){
+        //     f.target.style.backgroundColor = "lightblue";
+        //     console.log(f);
+        // });
+        // document.getElementById("div1").addEventListener("click", function(g){
+        //     g.target.style.backgroundColor = "lightblue";
+        //     console.log(g);
+        // });
+        // document.getElementById("div1").addEventListener("click", function(z){
+        //     z.target.style.backgroundColor = "lightblue";
+        //     console.log(z);
+        // });
+
+
+
+
+        // function add(a,b) {
+        //     return a+b;
+        // };
+        // console.log(add(5,3));
+        
+        // const multiply = function(a,b){
+        //     return a*b;
+        // };
+        // console.log(multiply(5,3));
+        // console.log(multiply(6,0));
+
+
+        // const calculator = {
+        //     subtract: function(a,b){
+        //         return a-b;
+        //     },
+        //     divide(a, b){
+        //         return a/b;
+        //     }
+        // };
+        // console.log(calculator.subtract(10,3));
+        // console.log(calculator.divide(12,4));
+        // console.log(calculator.divide(12,0));
+
+        // (function sayHello(){
+        //     console.log("안녕");
+        // })();
+
+
+
+
+        // document.getElementById("div1").addEventListener("click", function(e){
+            
+        //     // target: 실제 이벤트가 일어나는 주체 대상 "document.getElementById("div1")"이라고 봐도 무방하다.
+        //     e.target.style.backgroundColor ="lightblue";
+        //     // 이 상황에서는 this을 써도 되고 e.target을 써도 된다. arrow function 사용 못함.
+        //     this.style.backgroundColor = "lightblue";
+        //     // 다른 상황에서는 this가 다른 것을 가리킬 수 있음. console.log(this)찍어보면 이 상황에서는 
+        //     console.log(this);
+        //     // EventListener이므로 화면에서 클릭을 해야 console 창에 가리키는 대상이 뜬다.
+        // });
+    </script>
+</body>
+</html>

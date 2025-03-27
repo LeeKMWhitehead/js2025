@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+        <!-- function 함수명(매개변수이름){
+        console.log("여기에 함수한테 시키싶은 일 : " + `${매개변수}`);
+        }
+
+        함수명('매개변수를 뺴라'); -->
+<body>
+    <script>
+        function 함수명(매개변수이름){
+        console.log("여기에 함수한테 시키고 싶은 일 : " + `${매개변수}`);
+        }
+        // 여기에 함수한테 시키고 싶은 일 : 매개변수를 ㅃ라. => 출력 내용
+        함수명('매개변수를 ㅃ라.');
+
+        function 함수명(매개변수){
+            console.log("여기에 함수한테 시키고 싶은 일:" +`${매개변수}`);
+        }
+        함수명('메롱')
+
+        // 1. 함수의 기본형태
+        // - function funcname(param1, param2...){
+        // ...
+        // logic
+        // ...return return-value;
+        // }
+        // 선언과 사용
+
+        function func1(){
+            console.log("이것은 기본 function 형태입니다.");
+            // func1() 함수가 하는 기능으로서 화면에 이것은 기본 function형태입니다.가 출력된다.
+        }
+        // 기명함수(named function)
+
+        function 함수명(매개변수){
+            console.log("여기 함수한테 시키고 싶은 일:"+`${매개변수}`);            
+        }
+        
+        함수명("C++");
+        함수명("C++");
+        console.log(`++++++++++++++++++++++++++=================`)
+
+        // 호출(calling a function or callback이라고 부르기도 함.)
+        func1();
+        func1();
+        func1();
+        func1();
+        func1();
+        func1();
+
+        함수명("C++");
+        함수명("C++");
+        함수명("C++");
+        함수명("C++");
+        함수명("C++");
+        
+        // 선언에만 그치는 것이 아니고 선언하고 난 후 반복적으로 호출만 하면 언제든지 사용 가능함.
+
+        // 선언2 -> 익명함수 표현식anonymous function expresstion
+        var func2= function(){
+            console.log("이것은 기본 func2형태입니다.")
+        }
+        let func7= function(){
+            console.log("이것은 기본 func2-1형태입니다.")
+        }
+        func7();
+        func7();
+        func7();
+        func7();
+
+        var func3 =function var1(){
+        }
+        // 익명함수가 아니라 기명함수를 이런 식으로 쓰는 일은 그럴 일이 거의 없다. 왜냐하면 필요성이 없으므로.
+
+        // 호출
+        func2();
+        // 필요하니까 또 호출
+        func2();
+        // 호출
+        func2();
+        
+
+
+        // 함수 이름 짓는 방법
+        // -첫글자가 대문자가 될 수 없음
+        // -숫자가 와서도 안됨
+        // -예약어로는 사용이 불가
+        // '_'외에는 사용하지 않음
+    </script>
+</body>
+</html>

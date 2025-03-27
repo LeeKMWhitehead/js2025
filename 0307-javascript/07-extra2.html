@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event 처리와 익명함수</title>
+</head>
+<body>
+    <input type="text" name="txt1" id="txt1">
+    <div></div>
+ 
+    <script>
+        // function(asdf) 익명함수, 이름이 중요한 것이 아님. 낚시게임, 핵맨 같은 게임을 만들 수 있는 기초, 웹상에서 게임 구현
+        document.getElementById("txt1").addEventListener("click", function(asdf){
+            console.dir(asdf)
+            console.log(document.getElementById("txt1").value);
+        });
+        document.getElementById("txt1").addEventListener("keydown", function(e){
+            console.dir(e);
+            console.log(document.getElementById("txt1").value);
+        });
+    </script>
+</body>
+</html>
+ 

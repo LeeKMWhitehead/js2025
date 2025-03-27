@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+</head>
+<body>
+    <script>
+        //  'for~in' statement
+        // 인덱스 반환: 배열의 경우, for...in 루프는 각 요소의 인덱스를 문자열 형태로 반환합니다.
+        const arr1_1 = [1, 2, 3, 4, 5];        
+
+        for(let val in arr1_1){
+            console.log(`${val} : ${arr1_1[val]}`);
+            // index 출력, 키(인덱스)를 순회
+        }
+
+            // 'for~of' statement
+        for(const val of arr1_1){
+            console.log(val);
+        }
+        // for...of 루프는 배열의 요소 값을 순회하는 데 사용.
+
+        // const obj1={a:1 , b: "abc"};
+        // for(const val of obj1){
+        //     console.log(val);
+        // }
+
+        // for~each statment
+        const arr2_1 = ["a","d","b","c"];
+
+        arr2_1.forEach(function(item, index){
+            console.log(`${index} : ${item}` );
+        });
+
+        const obj2 ={
+            0 : "a",
+            1 : "b",
+            2 : "c",
+            length : 3,
+        };
+
+        // Array.forEach.call(obj2);
+
+    </script>
+</body>
+</html>

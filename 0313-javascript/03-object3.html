@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const bottle={
+            juice : 50,
+            open(){ // 함수가 아님, 메서드임
+                console.log("뚜껑을 연다.");
+            }
+        };
+
+        // 1
+        // bottle ={
+        //     water : 80
+        // } 이렇게 쓰고 라이브 서버 작동 시키면 바로 오류 발생 const를 변경시키려고 하니까, const 속성 때문에
+
+        //  2
+        // const라고 하더라도 내부에 있는 값을 변경시킬 수 있다.
+        bottle.juice = 80;
+        console.dir(bottle);
+        console.log(bottle);
+
+        // 3
+        bottle.water = 100; //일반적인 객체에서는 바로 오류 발생, 선언되지도 않은 water를 집어넣을 수 있다. 자바스크립트의 특이성
+        console.dir(bottle); // 이걸 열어보면 확인할 수 있음. 마치 water라는 속성이 이전부터 있었던 것처럼 행동.
+        
+        // 4
+        bottle.open();
+        bottle['open']();
+        bottle["open"]();
+        // 위와 같이 하면 메서드를 실행시킬 수 있다. 자유도가 워낙 높은 언어이므로 위와 같이 표현 가능함. 모두 동일한 결과를 보임.
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>implicit type coercion</title>
+</head>
+<body>
+    <script>
+        var a1 = 10+"10";
+        console.log(a1); // 1010
+        var a2 = true + "10";
+        console.log(a2); // true10
+        var a3 = true + 10;
+        console.log(a3); // 11
+        var a4 = "42";
+        console.log(typeof a4); // string
+        console.log(typeof +a4); // number
+        console.log(a4); // 42
+        console.log(+a4); // 42
+
+    </script>
+</body>
+</html>

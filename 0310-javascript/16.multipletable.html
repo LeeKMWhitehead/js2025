@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multipleTable</title>
+</head>
+<!-- . 특정 구구단 출력하기 
+• 입력: HTML <input> 태그로 숫자 값을 받아 변수 m에 저장하세요. 
+• 출력: for 문을 사용하여 m단(예: m*1부터 m*9)의 구구단을 구성한 후, <div id="result"></div>
+의 innerHTML 또는 alert()를 이용해 출력합니다.  -->
+<body>
+    <input type="number" name="num1" id="num1" min="2" max="19">
+    <button id="btn">generating</button>
+    <div id="result"></div>
+    <script>
+        document.getElementById("btn").addEventListener("click", function(){
+            var m= parseInt(document.getElementById("num1").value);
+            var i;
+            var result="";
+            for(i=1;i<=19; i++){
+            result += m + " * " + i + " = " + (m * i) + "<br>";
+        }
+
+        document.getElementById("result").innerHTML=result;
+        // alert("구구단:" result);
+        alert("구구단:\n" + result.replace(/<br>/g, '\n')); // alert 창에 결과 출력
+        });
+    </script>    
+</body>
+</html>

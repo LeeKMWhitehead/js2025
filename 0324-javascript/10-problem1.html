@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="div1"></div>
+    <button id="btn1">Action!</button>
+    <button id="btn2">End!</button>
+
+    <script>
+      let inter1;
+
+      document.getElementById("btn1").addEventListener("click", function () {
+        inter1 = setInterval(function () {
+          document.querySelector("#div1").textContent += "Hello, Students!";
+        }, 200);
+      });
+
+      document.getElementById("btn2").addEventListener("click", function(){
+        clearInterval(inter1);
+      });
+    </script>
+  </body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // window.onload =() => {
+        //     setInterval(() => {
+        //         document.write("Existentialismus!");
+        //         console.log("Existentialismus!");
+        //     }, 300);
+        // };
+
+        window.onload =() => {
+            setInterval(() => {
+                document.write("Existentialismus!");
+                console.log("Existentialismus!");
+            }, 200);
+        }
+
+    </script>
+</body>
+</html>

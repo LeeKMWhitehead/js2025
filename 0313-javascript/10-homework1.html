@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #screen{
+            font-size: 30px;
+            color: rgb(236, 214, 16);
+        }
+    </style>
+</head>
+<!-- ### 문제 1. 특정 요소의 속성(attribute) 읽기
+- 문제 설명: 
+ HTML 파일 내 `<div id="myElement" data-info="Hello, World!"></div>` 요소에서 `data-info` 속성의
+값을 읽어 콘솔에 출력합니다.
+- 요구 사항: 
+ 1. `document.getElementById`로 요소를 선택합니다. 
+ 2. `getAttribute` 메서드를 이용해 `data-info`의 값을 읽습니다.
+- 예상 결과: 콘솔에 “Hello, World!”를 출력.-->
+
+<!-- 문제 1: attribute 값 읽기</title> 
+<style> 
+body { font-family: sans-serif; padding: 20px; } 
+</style> 
+</head> 
+<body> 
+data-info attribute를 가진 요소
+<div id="myElement" data-info="Hello, World!">이곳의 data-info를 콘솔에 출력합니다.</div> 
+<script> 
+// 요소 선택 및 data-info attribute 값 읽기 
+const myElement = document.getElementById('myElement'); 
+const info = myElement.getAttribute('data-info'); 
+console.log("data-info 값:", info); 
+</script> 
+</body> 
+</html> -->
+<body>
+   <div id="myElement" data-info="Hello, World!"></div>
+   <div id="screen"></div>
+   <button id="btn">버튼</button>
+   <script>
+    
+    document.getElementById("btn").addEventListener("click", function(){
+        const greeting = document.getElementById("myElement").getAttribute('data-info');
+        console.log(greeting);
+        document.getElementById("screen").textContent = greeting;
+    });
+   </script>
+</body>
+</html>

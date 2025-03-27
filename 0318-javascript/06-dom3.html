@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textContent와 똑같은 textNode</title>
+</head>
+<body>
+    <div id="div1">
+        <p id="p1">as below <br> </p>
+    </div>
+
+    <script>
+        // textNode : 글자를 textContent처럼 안에 삽입하는 형질을 가진 태그
+        // textContent는 화면에 글자를 삽입할 수 있는 기능
+        const txt1 = document.createTextNode("안녕하세요?");
+        document.querySelector("#p1").append(txt1);
+    </script>
+</body>
+</html>

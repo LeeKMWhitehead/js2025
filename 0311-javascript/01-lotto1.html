@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lottoLottery</title>
+</head>
+<!-- 코딩은 논리가 아니라 글쓰기가 문제. 출발점은 글쓰기 창작능력이다. -->
+<!-- 맨처음은 로직이 아니라 글을 쓰는 능력이다. -->
+<!-- 일단은 주석이나 노트에 갈겨봐라. 분명히 추상적인 부분이 있다. -->
+ <!-- 1. 6개의 숫자가 위치하는 인터페이스가 존재 -->
+ <!-- 2. 버튼을 누르게 되면 6개의 인터페이스에서 각각 1~45까지의 random number가 나온다. -->
+
+
+<!-- 로직을 하려고 하지 말고 글을 쓰고 구체화하려는 능력이 중요하다! 글을 쓰라!-->
+
+<body>
+    <div class="container">
+<!-- div#num$.lotto-number{?}*6 -->
+<!-- 6개의 숫자가 존재하는 인터페이스가 존재! -->
+<div id="num1" class="lotto-number">?</div>
+<div id="num2" class="lotto-number">?</div>
+<div id="num3" class="lotto-number">?</div>
+<div id="num4" class="lotto-number">?</div>
+<div id="num5" class="lotto-number">?</div>
+<div id="num6" class="lotto-number">?</div>    
+</div>
+<button id="btn">로또 번호 추첨!</button>
+<script>
+    // 2. 버튼을 누른다.
+    document.getElementById("btn").addEventListener("click", function(){
+        // 윗줄은 버튼을 누른다는 과정만 진행할 수 있을 뿐 그 이후에 어떻게 할지는 나와있지 않음. 이후에 진행됨
+        // 이하가 추상적 영역이다. 이것을 어떻게 구체적으로 진행할 것인지 물음은 더 쪼개고 답을 찾는다. 추상화된 단계에서 구체화된 단계로 점점 이행되는 훈련을 해야한다. 일종의 시나리오를 잡아가야 이게 순서도가 된다.
+        // 3. 6개의 인터페이스에서 각각 1~45까지 랜덤 숫자가 나온다.
+        // 3-1. 6개의 인터페이스에 어떻게 접근? getElementById
+        // 3-1-1 인터페이스의 컨텐츠 영역에 어떻게 접근? -> textContent, innerText
+            // 3-2 랜덤한 숫자를 어떻게 1~45 까지 뽑아? -> Math.floor(Math.random*45)+1
+            // 수정 후
+            // 3. 6개의 인터페이스를 getElementById를 통해 각각의 변수에 저장
+            var num1 = document.getElementById("num1");
+            var num2 = document.getElementById("num2");
+            var num3 = document.getElementById("num3");
+            var num4 = document.getElementById("num4");
+            var num5 = document.getElementById("num5");
+            var num6 = document.getElementById("num6");
+            // 4. 각 6개의 인터페이스에 넣을 랜덤한 값 1~45까지의 정수 중 하나를 발생시킨다.
+            //    => Math.floor(Math.random*45)+1
+            var ran1 = Math.floor(Math.random()*45)+1;
+            var ran2 = Math.floor(Math.random()*45)+1;
+            var ran3 = Math.floor(Math.random()*45)+1;
+            var ran4 = Math.floor(Math.random()*45)+1;
+            var ran5 = Math.floor(Math.random()*45)+1;
+            var ran6 = Math.floor(Math.random()*45)+1;
+            // 문제: 랜덤 값 출력 후에 중복 값이 생성됨
+            // 해결방법은 복수로 존재함
+            // 4-1. 또 시나리오 작성. 6개의 랜덤 값에 반복된 값이 있는지를 살펴본다.
+            // 4-1-1. 검토: 6개의 random value => ran1, ran2, ran3, ran4, ran5, ran6 
+            // 4-1-2. 검토: 반복된 값? => ran1이 ran2~ran6까지 같은지를 비교하고
+            // 4-2. 만약 반복값이 존재할 경우 해당 값을 재굴림 하거나 전체 숫자를 재굴림한다. 만약에 같을 경우 ran1을 재생성
+            // ran2부터 ran6까지 위의 내용을 반복한다.
+            if(ran1 == ran2 || ran1 == ran3 || ran1 ==ran4 || ran1 == ran5 || ran1 == ran6){
+                ran1 = Math.floor(Math.random()*45)+1;
+            }
+            if(ran2 == ran1 || ran2 == ran3 || ran2 ==ran4 || ran2 == ran5 || ran2 == ran6){
+                ran2 = Math.floor(Math.random()*45)+1;
+            }
+            if(ran3 == ran1 || ran3 == ran2 || ran3 ==ran4 || ran3 == ran5 || ran3 == ran6){
+                ran3 = Math.floor(Math.random()*45)+1;
+            }
+            if(ran4 ==ran1 || ran4 == ran2 || ran4 == ran3 || ran4 == ran5 || ran4 == ran6){
+                ran4 = Math.floor(Math.random()*45)+1;
+            }
+            if(ran5 == ran1 || ran5 == ran2 || ran5 == ran3 || ran5 ==ran4 || ran5 == ran6){
+                ran5 = Math.floor(Math.random()*45)+1;
+            }
+            if(ran6 == ran1 || ran6 == ran2 || ran6 == ran3 || ran6 ==ran4 || ran6 == ran5){
+                ran6 = Math.floor(Math.random()*45)+1;
+            }
+            // 이런 식으로 풀 수도 있다라는 예제.
+
+
+            // 첫번째 random value를 생성시킨 뒤에 두번째 random value를 생성시킨다.
+            // 이때 if(ran1 === ran2)라면 다시 random value를 생성시켜서 ran1과 비교하고 다른 random value가 나올 때까지 반복한다. 다른 random value가 나오면 ran2에 저장한다.
+            // 다시 random value값을 생성시켜서 ran1과 ran2와 비교한다. 이 과정을 반복해서 모두 다른 값이 나올 때까지 반복하다가 다른 random value이 나오면 ran3에 저장한다.
+            // 다시 random value값을 생성시켜서 ran1, ran2, ran3와 비교한다. ran1, ran2, ran3, 새로 생성한 random value가 모두 다른 값이 나올 때까지 반복한다.
+            // 조건을 충족하는 순간 새로 생성한 random value를 ran4에 저장한다.
+            // 다시 random value를 생성한 다음 ran1, ran2, ran3, ran4와 모두 순차적으로 비교한 다음 모두 다른 값이 나올 때까지 반복한다.
+            // 조건을 충족하는 순간 새로 생성한 random value를 ran5에 저장한다.
+            // 다시 random value를 새로 생성한 다음 ran1, ran2,ran3, ran4, ran5와 모두 순차적으로 비교한 다음 모두 다른 값이 나올 때까지 반복한다.
+            
+            // 5. 3번의 각 변수에 넣었던 인터페이스의 textContent에 해당 랜덤값을 넣는다.
+            num1.textContent = ran1;
+            num2.textContent = ran2;
+            num3.textContent = ran3;
+            num4.textContent = ran4;
+            num5.textContent = ran5;
+            num6.textContent = ran6;
+            // 글이나 이야기로 풀어나가는 것이 안 되니까 나중에 이 길은 내 길이 아닌가벼하고 짐을 싸는 사태 발생. 로직과 아무 상관이 없다.
+            // 중간에 있는 예외상황이나 에러에 당면할 수 있다. 기본적인 것을 만들어서 일단 시행을 해보고 이때 문제를 파악하고 시행착오 끝에 문제를 해결하는 것이 문제해결능력!
+            // 로또에는 동일한 수가 나오면 안 된다. 즉 중복성 검사를 해야하는데 현재 이 틀에서는 힘들다.
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제3: 리스트 항목 추가하기</title>
+</head>
+<!-- ### 문제 3: 리스트 항목 추가하기
+- 문제 개요: 버튼 클릭을 통해 리스트에 새로운 항목을 동적으로 추가합니다.
+- 문제 설명: 기존의 리스트에 `"New Item"` 텍스트를 가진 항목을 추가합니다.
+- 구체적인 요구사항:
+- HTML 파일에 `<ul id="myList"><li>Item 1</li><li>Item 2</li></ul>`와 `<button id="addItemBtn">항목 추가</button>`가 있습니다.
+- 버튼을 클릭할 때마다 새로운 `<li>` 요소를 생성하고, 텍스트로 `"New Item"`을 삽입하여 `myList` 
+안에 추가하세요.
+- 힌트: `document.createElement`와 `appendChild`를 활용합니다. -->
+
+<body>
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+    <button id="addItemBtn">항목추가</button>
+
+    <script>
+        var addItemBtn = document.getElementById("addItemBtn");
+        var myList = document.getElementById("myList");
+        addItemBtn.addEventListener("click", function(){
+            var newItem = document.createElement("li");
+            newItem.textContent = "New Item";
+            myList.appendChild(newItem);
+        });    
+
+    </script>
+</body>
+</html>

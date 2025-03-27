@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제1: Custom Play/Pause Toggle</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            text-align: center;
+            margin-top:2em;
+            color: red;
+        }
+
+        button{
+            padding: 0.5em 1em;
+            font-size: 16px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+
+    <h1>CUSTOM PLAY & PAUSE TOGGLE</h1>
+    <video id="myVideo" width="960" height="540">
+        <source src="./0325problemMaterial/videos/sample1.mp4" type="video/mp4">
+    </video>
+    <br>
+    <button id="toggleBtn">재생</button>
+
+    <script>
+        const video = document.getElementById("myVideo");
+        const toggleBtn =  document.getElementById("toggleBtn");
+        toggleBtn.addEventListener("click", function(){
+            if(video.paused){
+                video.play();
+                toggleBtn.innerText = "멈춤";
+            }else{
+                video.pause();
+                toggleBtn.innerText = "재생";
+            }
+
+        });
+
+
+    </script>
+
+
+
+
+    <!-- 
+    
+        <video id="myVideo" width ="960" height="540" >
+            <source src="./0325problemMaterial/videos/sample1.mp4" type="video/mp4">
+        </video>
+        <br>
+        <button id="toggleBtn">PLAY</button>
+
+<script>
+    const video = document.getElementById("myVideo");
+    const toggleBtn = document.getElementById("toggleBtn");
+    toggleBtn.addEventListener("click", function(){
+        if(video.paused){
+            video.play();
+            toggleBtn.innerText = "PAUSE";
+        }else{
+            video.pause();
+            toggleBtn.innerText = "PLAY";
+        }
+    }); -->
+
+
+    
+    
+</script>
+</body>
+</html>

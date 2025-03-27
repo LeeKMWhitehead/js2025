@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제 10: 유효성 검사하기</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" id="username" placeholder="name-input">
+        <button id="submit">제출</button>
+    </form>
+
+    <script>
+        var myForm = document.getElementById("myForm");
+        myForm.addEventListener("submit", function(event){
+            var username = document.getElementById("username").value;
+            if (username.trim() === ""){
+                event.preventDefault();
+                alert("이름을 입력하세요.");                
+            }
+        });
+        document.write("이름을 입력하세요.");
+        // 이게 method야.
+    </script>
+</body>
+</html>

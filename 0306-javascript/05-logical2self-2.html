@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logical_operators2</title>
+</head>
+<body>
+    <script>
+        // 현실적 예제
+        var a1 = 3; // a1의 값이 유동적으로 변할 수 있음
+        var b1 = 5; // b1의 값이 유동적으로 변할 수 있음
+
+        // 조건을 모두 만족해야 하는 경우
+        // (ex) 불러온 게시판에 글이 하나 이상 존재하고 사용자가 로그인을 한 계정이면
+        var result1 = (a1 > 2 && b1 < 7) ? "조건 모두 만족" : "조건 불만족";
+        var message1 = "a1: " + a1 + ", b1: " + b1 + " - 조건 모두 만족 결과: " + result1;
+        console.log(message1);
+        alert(message1);
+        
+
+        // 주어진 조건 중 하나라도 만족하는 경우
+        // (ex) 카테고리 A의 아이템이 하나라도 있던가 아니면 카테고리 B의 아이템이 하나라도 있던가
+        var result2 = (a1 > 4 || b1 < 7) ? "조건 중 하나라도 만족" : "조건 모두 불만족";
+        var message2 = "a1: " + a1 + ", b1: " + b1 + " - 조건 중 하나라도 만족 결과: " + result2;
+        console.log(message2);
+        alert(message2);
+
+        // 비교연산, 산술연산과 논리연산의 조합을 통해서 실제 상황에서 문제를 해결한다. 비교연산 단독으로 사용되는 경우는 별로 값어치가 없다.
+        console.log(3%2);
+    </script>
+</body>
+</html>

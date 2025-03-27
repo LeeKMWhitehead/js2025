@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>type coercion</title>
+</head>
+<body>
+    <script>
+        // var n= 15;//숫자 15
+        // n.toString();//문자열로 변환됨
+        // console.log(typeof n.toString());//string
+        // n.toString(16);//15를 16진수로 바꿈
+        // console.log(n.toString(16)) // 그래서 f를 콘솔에 출력함
+
+        var n= 12.345;
+        // n.toFixed(1);//12.3
+        // n.toFixed(2);//12.35
+        // n.toFixed(3);//12.345
+        // console.log(n.toFixed(1), n.toFixed(2), n.toFixed(3));
+
+        n.toPrecision(1);
+        n.toPrecision(2);
+        n.toPrecision(3);
+        console.log(n.toPrecision(1), n.toPrecision(2), n.toPrecision(3));
+
+        String(15);
+        String(true);
+        console.log(typeof String(15), typeof String(true));
+    </script>
+</body>
+</html>

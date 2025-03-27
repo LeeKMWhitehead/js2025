@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1 - default parameter
+        function func1(a, b){
+            return a+b;
+        }
+
+        console.log(func1(3, 4));
+        // 7출력
+
+        function func1(a, b=5){
+            return a+b;
+        }
+
+        console.log(func1(3));
+        // 8출력
+
+
+        //  2 - rest parameter 나머지 매개변수
+        // 매개변수를 몇 개나 접수해야할 지 가변적일 때 쓰는 기호 ..., 단점은 배열형태의 데이터만 받아들일 수 있다.
+        function func2(a, b, c){
+            console.log(a,b,c);
+            // 2 3 4 출력            
+        }
+        func2(2,3,4);
+
+        function func3(a, b, ...param){
+            // console.log(a,b,c);
+            // ...param이 함수의 변수로 선언되었으므로 c와 서로 사맛디 않고 
+            // ...param이 매개변수를 몇 개나 접수해야 할 지 모르는 상황에서 쓰는 연산자이므로 c가 필요업다.
+            // console.log(a,b);
+            // 2 3 출력
+            console.log(param);
+            // [4] 출력. 그 부분을 array로 받아들이겠다는 의미이므로 array가 출력됨. 그래서 [4]가 나옴
+            console.log(a, b, param);
+            // 2 3 [4] 출력
+            console.log(a, b, ...param);
+            // 2 3 4 출력 ... 스프레드 연산자 주목
+        }
+        func3(2,3,4);
+
+    function func4(a, b, ...param){
+        // 이 유형에서는 위의 변수 부분에 ...param이라고 써야만 한다. 그냥 param만 쓰면 의미가 없음.
+        console.log(a, b);
+        // 8 9 출력
+        console.log(a, b, ...param);
+        // ...은 spread operator(스프레드 연산자)라고 부르며, 
+        // 그래서 8 9 10 11 12 13 출력
+        console.log(a,b, param);
+        // param은 그 부분을 array로 받아들이겠다는 의미
+        // 그래서 8 9 array(4) 혹은 8 9 (4)[10, 11, 12, 13] 출력
+      }
+      func4(8,9,10,11,12,13)
+    </script>
+</body>
+</html>
+
+
+<!-- function func3(a, b, ...param) { -->
+    <!-- console.log(a, b, param); // array 2 3 [4 5 6 7] 출력 -->
+    <!-- console.log(a, b, ...param); // 구조분해 2 3 4 5 6 7 출력 -->
+  <!-- } -->
+    <!-- func3(2,3,4,5,6.7) -->

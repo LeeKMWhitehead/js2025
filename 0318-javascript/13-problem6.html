@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제6: 문단 스트일 일괄 변경하기</title>
+</head>
+
+<body>
+    <p>문단 1</p>
+    <p>문단 2</p>
+    <p>문단 3</p>
+    <script>
+        var paragraphs = document.querySelectorAll("p");
+        paragraphs.forEach(function(p){
+            p.style.color = "red";
+        });
+    </script>
+</body>
+</html>

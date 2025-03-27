@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스 토글</title>
+    <style>
+        .mystyle{
+            width: 100%;
+            padding: 25px;
+            background-color: coral;
+            color: white;
+            font-size: 25px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <button id="tog">클래스 토글</button>
+    <div id="mydiv" class="temp">"This is a div element. 여기는 div 요소라구."</div>
+    <script>
+        // document.getElementById("tog").addEventListener("click", function(){
+        //     const div=getElementById("mydiv");
+        //     div.classList.toggle("mystyle");
+         
+        // });
+        
+        // 1
+    // document.getElementById('tog').addEventListener('click', function(){
+    //     console.log('good job');
+    // })
+        // 2
+    // document.getElementById('tog').addEventListener('click', function(){
+    //     console.log(document.getElementById('mydiv'));
+    // })
+        // 3
+    // document.getElementById('tog').addEventListener('click', function(){
+    //     console.log(document.getElementById('mydiv').classList)';
+    // })
+
+        // 4
+    document.getElementById('tog').addEventListener('click', function(){
+        document.getElementById('mydiv').classList.toggle('mystyle');
+    })
+
+    </script>
+</body>
+</html>

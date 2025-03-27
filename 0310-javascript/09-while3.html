@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>while문</title>
+  </head>
+  <body>
+    <script>
+      var i = 0;
+      // while (i < 5){
+      //   if (i === 3) break;
+      //   i++;
+      //   console.log("출력" + i);
+      // }
+      while (i<5){        
+        // 반드시 증감연산을 위에 위치시킴으로써 무한루프를 돌아 자원을 다 소모하고 결국 멈추는 일을 막을 수 있다.
+        i++;
+        if(i===3)continue;
+        console.log("출력"+i);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // reduce : 값의 누적을 할 경우 필요한 함수
+        const arr1_1 = [67, 45, 98, 76, 30];
+        // MATLAB에서 통계 쪽 의미로 쓰는 함수 이름이(?) 공학 쪽에서 reducer(reducing)이라서 그렇게 쓴 것 같다. KGH-ficial
+
+        const arr1_2 = arr1_1.reduce(function(prev, currunt){
+            return prev + currunt ;
+            // sum
+        });
+        console.log(arr1_2);
+        //316
+
+        // mean
+
+        let arr1_3 = arr1_1.reduce(function(prev, currunt){
+            return prev + currunt;
+        });
+        console.log(arr1_3/arr1_1.length);
+        // 316/5 = 63.2
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>문제 2: attribute 수정하기</title>
+<style>
+    body { font-family: sans-serif; padding: 20px; }
+    img { display: block; margin-bottom: 15px; max-width: 300px; }
+    button { padding: 8px 16px; cursor: pointer; }
+</style>
+</head>
+
+<body>
+<img id="image" src="./images/old.jpg" alt="old image">
+<button id="changeButton">이미지 변경하기</button>
+<script>
+const image = document.getElementById('image');
+const changeButton = document.getElementById('changeButton');
+changeButton.addEventListener('click', function() {
+// setAttribute를 이용하여 src 변경
+image.setAttribute('src', './images/new.jpg');
+console.log("이미지 src가 new.jpg로 변경되었습니다.");
+});
+</script>
+</body>
+</html>

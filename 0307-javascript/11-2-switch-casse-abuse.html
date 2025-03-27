@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch_case_statement를 오용하는 사례</title>
+</head>
+<body>
+    <input type="number" name="num1" id="num1">
+    <button id="btn">출력</button>
+
+        
+    <script>
+    document.getElementById("btn").addEventListener("click", function(){
+            var n = parseInt(document.getElementById("num1").value);
+ 
+            var result = "";
+            switch(n){
+                case 1 :
+                case 2 :
+                case 3 :
+                case 4 :
+                    console.log("1~4");
+                    break;
+
+                case 5 :
+                case 6 :
+                case 7 :
+                case 8 :
+                        console.log("5~8");
+                        break;
+
+                default :
+                console.log("no value")
+            }
+
+            alert(result);
+        });
+    </script>
+</body>
+</html>

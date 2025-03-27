@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제3: 주기적 격려 메세지 출력</title>
+  </head>
+  <body>
+    <script>
+      const intervalId = setInterval(() => {
+        document.write("Keep focused!");
+      }, 2000);
+
+      setTimeout(() => {
+        clearInterval(intervalId);
+        document.write("Timer stopped!");
+      }, 10000);
+    </script>
+  </body>
+</html>

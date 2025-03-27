@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toggle of element visibility, 요소 가시성 토글하기</title>
+</head>
+<body>
+    <div id="toggleElement" style="border: 1px solid #ccc; padding: 5px;">보이거나 숨김</div>
+    <button id="toggleBtn">토글</button>
+    <script>
+        var toggleBtn = document.getElementById("toggleBtn");
+        var toggleElement = document.getElementById("toggleElement");
+        toggleBtn.addEventListener("click", function(){
+            if (window.getComputedStyle(toggleElement).display === "none"){
+                toggleElement.style.display ="block";                
+            } else {
+                toggleElement.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

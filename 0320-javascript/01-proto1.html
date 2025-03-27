@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="h1">안녕하세요?</h1>
+    <p id="p1">반갑습니다.</p>
+    <input type="text" id="txt1" name="txt1" />
+    <script>
+      console.dir(document.querySelector("#h1")); // [[Prototype]] : HTMLHeadingElement
+      console.dir(document.querySelector("#p1")); // [[Prototype]] : HTMLParagraphElement
+      console.dir(document.querySelector("#txt1")); // [[Prototype]] : HTMLInputElement
+    </script>
+  </body>
+</html>

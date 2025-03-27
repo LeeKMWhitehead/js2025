@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>산술연산자 기초</title>
+</head>
+<body>
+    <script>
+        // 1
+        console.log("1"+2);// 결합연산이 된다.
+        console.log(typeof ("1"+2)); // 문자열
+
+        // 2
+        console.log("5"-"2");
+        console.log(typeof("5"-"2")); // 말이 된다 싶으면 그냥 가는 거이 자바스크립트의 특징
+
+        // 3
+        console.log(true+3);//?
+
+        // 4
+        console.log(9.0); // infinite
+
+        // 5
+        console.log(4/2); // 2
+        console.log(4/2.0); // ?
+        console.log(4.0/2); // ?
+        console.log(5/2) // 2.5
+
+        // 6
+        console.log(3+5*2);// 13
+        console.log((3+5)*2) // 16, 괄호로 연산의 우선 순위 지정
+
+        // 7
+        console.log(4+3-2);// 5
+        
+        // 8
+        console.log(2**3**2);// 거듭제곱만 우에서 좌로 계산 512, 다른 연산과 방향이 차이남.
+
+        // var x=3;
+        // y=-x;
+        // console.log(y);
+
+        // var x="4";
+        // y=-x;
+        // console.log(y);
+        // console.log(+3);
+        // console.log(("+3")+1);
+        // console.log(typeof "+3"+1);
+        // console.log(+true);
+        // console.log(typeof +true);
+        // console.log(true);
+        // console.log(true);
+        // console.log((+"3")+1);
+        // console.log(+false);
+        // console.log(false);
+        var x=3;
+        y=x++;
+        console.log("x:"+x+"y:"+y);
+        
+        var a=2;
+        b=++a
+
+    </script>
+</body>
+</html>

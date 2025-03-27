@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>相續1</title>
+  </head>
+  <body>
+    <script>
+      // Global coding convention rule of class : Pascal case
+      // - 클래스의 글로벌 코딩 컨벤션 규칙은 파스칼 케이스.
+      // -  파스칼 케이스란 첫번째 단어의 글자가 대문자, 나머지는
+      // 소문자인 것을 의미.
+      // 참고(자바스크립트 한정)
+      // 1. 변수: 카멜케이스, 명사형으로 시작
+      // 2. 함수, 메서드: 카멜케이스, 동사형으로 시작
+      // 3. class: Pascal case
+
+      class PersonInfo {
+        setName(name) {
+          this.name = name;
+        }
+        getName() {
+          return name;
+        }
+        setAge(age) {
+          this.age = age;
+        }
+        getAge() {
+          return this.age;
+        }
+      }
+
+      class Employee extends PersonInfo {
+        setDept(dept) {
+          this.dept = dept;
+        }
+        getDept() {
+          return this.dept;
+        }
+      }
+
+      // 기능이 프로토타입을 타고 확장되니까 익스텐즈라고 부르는 거야!
+
+      const emp1 = new Employee();
+      emp1.setName("Mike");
+      emp1.setAge(42);
+      emp1.setDept("Sales");
+      console.dir(emp1);
+      // Employee
+      // age:42
+      // dept: "Sales"
+      // name: "Mike"
+      document.write(emp1);
+    </script>
+  </body>
+</html>

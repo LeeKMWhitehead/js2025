@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>new operator/constructor function1/생성명령어 생성자함수1</title>
+  </head>
+  <body>
+    <script>
+      function Person() {
+        this.var1 = 123;
+      }
+      // new 생성명령어. 붕어빵 찍듯이 대량으로 생산해내는 생성자함수
+
+      Person.prototype.func1 = function () {
+        console.log("프로토타입에서 생성한 기능");
+      };
+
+      const per1 = new Person();
+
+      console.dir(per1);
+      console.log(per1.__proto__ === Person.prototype); // true
+    </script>
+  </body>
+</html>

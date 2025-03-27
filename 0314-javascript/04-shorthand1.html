@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>알쓸신잡shorthand1</title>
+</head>
+<body>
+    <script>
+        let x =1;
+        let y=2;
+        let z="abc";
+
+        // const obj1 = {
+        //     x: x,
+        //     y: y,
+        //     z: z,
+        // }
+
+        // 동일한 결과를 보임, ecma6이후 나옴
+        const obj1 = {x,y,z};
+        
+        console.log(obj1.x); // 1
+        console.log(obj1.y); // 2
+        console.log(obj1.z); // abc
+    </script>
+</body>
+</html>

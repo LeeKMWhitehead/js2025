@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch_case</title>
+</head>
+<body>
+    <!-- 빠른 반응을 원하는 상황에서 if statement는 약간 맞지 않다. -->
+    <input type="number" name="num1" id="num1">
+    <button id="btn">출력</button>
+ 
+    <script>
+        document.getElementById("btn").addEventListener("click", function(){
+            var n = parseInt(document.getElementById("num1").value);
+ 
+            var result = "";
+            switch(n){
+                case 1 :
+                    result = "입력값은 1입니다.";
+                    break;
+                case 2 :
+                    result = "입력값은 2입니다.";
+                    break;
+                case 3 :
+                    result = "입력값은 3입니다.";
+                    break;
+                case 4 :
+                    result = "입력값은 4입니다.";
+                    break;
+                default :
+                    result = "해당되는 입력값이 없습니다.";
+            }
+//  switch-case문 속도는 if문보다 빠르다. 단일값에 대한 동등비교, 조건식이나 함수에 의한 비교는 일절 안 됨. 빠르기가 장점이고 단순함이 단점이다.
+            alert(result);
+        });
+
+
+
+
+
+// <!-- 빠른 반응을 원하는 상황에서 if statement는 약간 맞지 않다. -->
+//     <input type="number" name="num1" id="num1">
+//     <button id="btn">출력</button>
+
+//         document.getElementById("btn").addEventListener("click", function(){
+//             var n = parseInt(document.getElementById("num1").value);
+ 
+//             var result = "";
+//             switch(n){
+//                 case 1 :
+//                 case 2 :
+//                 case 3 :
+//                 case 4 :
+//                     console.log("1~4");
+//                     break;
+
+//                 case 5 :
+//                 case 6 :
+//                 case 7 :
+//                 case 8 :
+//                         console.log("5~8");
+//                         break;
+
+//                 default :
+//                 console.log("no value")
+//             }
+
+//             alert(result);
+//         });
+    </script>
+
+</body>
+</html>

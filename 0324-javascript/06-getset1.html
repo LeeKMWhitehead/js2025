@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    class Member1{
+        constructor(name){
+            this._name = name;
+        }
+
+        get name(){
+            return this._name;
+        } // getter야.
+
+        set name(name){
+            this._name = name;
+        } // 이게 setter야.
+    }
+
+    const obj1 = new Member1("kgh");
+    console.log(obj1.name); // kgh
+    obj1.name = "aaa";
+    console.log(obj1.name); // aaa
+    // class에서도 getter, setter 쓸 수 있다.
+    </script>
+</body>
+</html>

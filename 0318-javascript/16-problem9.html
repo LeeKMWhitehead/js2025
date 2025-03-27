@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제 9: 마우스 오버 시 이미지 변경하기</title>
+</head>
+<body>
+    <img id="myImage" src="images/img1.jpg" alt="사진이라궁!" style="width: 150px;">
+    <script>
+        var myImage = document.getElementById("myImage");
+        myImage.addEventListener("mouseover", function(){
+            myImage.src = "images/img1.jpg";
+        });
+        myImage.addEventListener("mouseover", function(){
+            myImage.src = "images/img3.jpg";
+        });
+    </script>
+</body>
+</html>

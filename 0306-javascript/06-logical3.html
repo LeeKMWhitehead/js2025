@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Document</title>
+</head>
+<body>
+    <script>
+        // javascript에서만 사용하는 연산 소개(바로 밑에 세 줄)
+        console.log("Cat" && true); // true
+        console.log(!!"Cat"); // true 문자열은 비어있지 않으면 아예 참으로 치부하는 자바스크립트의 속성때문에, !! not 연산 두 개는 true나 false를 출력함
+        console.log(!!""); // false
+        console.log(!!" "); // true
+        " abcd     ".trim()// 좌우 공백을 제거하기 위해 .trim()명령어 실행, length도 계산, 프로그래머의 무덤, 고민, 고통. 모든 프로그램이 갖고 있는 공통의 문제인데 안 보이는데 어디 숨어서 돌아다니는지 모르니까. 다른 수단도 있다. 이 에러를 잡기 위해 전처리를 잘 하기 위해 외주를 줌.
+        
+        console.log(false && "Cat"); // false or true ? 사람처럼 총체적으로 판단하지 않는다. false와 &&만 읽고 리턴
+        console.log(`=======================`); 
+        console.log("Dog" && "Cat"); // Cat 다른 언어들은 불리언 값으로만 나오는 것이 정상이지만 자바스크립트는 아니다. 인터프리터 행태이므로 Dog가 참이고 && 연산하기 위해 Cat도 참이 되고 그러니까 어차피 참이니까 참인 Cat을 리턴함. 한 번 읽어 그다음 조건에 맞으면 그 다음 거 읽고 리턴
+        console.log("Dog" && false); // false 인터프리터의 입장에서 컴퓨터처럼 읽어보면 된다
+        console.log(true && "Cat"); // Cat
+
+        console.log(""&&true) // ""(공백이니까 거짓)
+
+        console.log(false || "Cat") // Cat
+        console.log("Dog"||"Cat") // Dog
+
+        console.log("Dog" && " "); // " "
+        console.log("Dog" && ""); // ""
+        console.log("" && "Cat"); // ""
+        console.log(" " && "Cat"); // "Cat"
+        console.log("" && true); // ""
+        console.log("" && false); // ""
+        console.log(" " && true); // true
+        console.log(" " && false); // false
+        console.log(true && ""); // ""
+        console.log(false && ""); // false
+        console.log(true && " "); // " "
+        console.log(`=======================`);
+        console.log(false && " "); // false
+
+        console.log("Dog" || "Cat" ||null);//자바스크립트는 확정이 되느냐 안 되느냐가 중요함. 다른 언어와 다른 메커니즘을 사용함.
+        console.log(`=======================`);
+        // isPending && list;
+        // 성능을 아끼는 효자노릇
+
+        console.log(!!{});        
+        console.log(!!null);
+        // 자바스크립트에서 오브젝트는 null을 제외한 나머지는 참, null만 거짓 , 교안 2장 3쪽. 프리미티브 데이터 타입에서 스트링은 비어있는 것만 거짓
+        console.log(!(null && null));
+        console.log(!![]);
+
+
+    </script>
+</body>
+</html>

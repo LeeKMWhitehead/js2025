@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ifelse_statement_다분기선다형</title>
+</head>
+<body>
+    <input type="number" name="num1" id="num1">
+    <button id="btn">출력</button>
+ 
+    <script>
+        // if(50>num1>=30){
+        //     result = 입력값은 30을 포함 50사이에 존재합니다.;
+        // }
+        // 이렇게는 안 쓴다.
+
+
+        // digging pheonomenon
+        // document.getElementById("btn").addEventListener("click", function(){
+        //     var num1 = parseInt(document.getElementById("num1").value);
+ 
+        //     var result = "";
+ 
+        //     if(num1 > 50){
+        //         result = "입력값은 50보다 큽니다.";
+        //     }else{
+        //         if(num1 > 40 && num1 <= 50){
+        //             result = "입력값은 50을 포함 40 사이에 존재합니다.";
+        //         }else{
+        //             if(num1 > 30 && num1 <= 40){
+        //                 result = "입력값은 40을 포함 30 사이에 존재합니다.";
+        //             }else{
+        //                 if(num1 > 20 && num1 <= 30){
+        //                     result = "입력값은 30을 포함 20 사이에 존재합니다.";
+        //                 }else{
+        //                     result = "입력값은 20 이하입니다.";
+        //                 }
+        //             }
+        //         }
+        //     }
+ 
+        //     alert(result);
+        // });
+
+        document.getElementById("btn").addEventListener("click", function(){
+            var num1 = parseInt(document.getElementById("num1").value);
+ 
+            var result = "";
+ 
+
+            // if_elseif_else문 = 고급조건분기문
+            // if(num1 > 50){
+            //     result = "입력값은 50보다 큽니다.";
+            // }else if(num1 > 40 && num1 <= 50){
+            //     result = "입력값은 50이하 40초과의 범위에 존재합니다.";
+            // }else if(num1 > 30 && num1 <= 40){
+            //     result = "입력값은 40이하과 30초과의 범위에 존재합니다.";
+            // }else if(num1 > 20 && num1 <= 30){
+            //     result = "입력값은 30이하 20초과의 범위에 존재합니다.";
+            // }else{
+            //     result = "입력값은 20 이하입니다.";
+            // }
+ 
+            // alert(result);
+
+
+            // 조건을 훨씬 간단하게 축약시킬 수 있다.
+            // if_elseif_else 상위조건에 이미 걸러낸 부분은 하위조건에 적지않아도 되므로 축약가능함. 조건의 탈락과 축소가 일어나는 if_elseif_else문
+            if(num1 > 50){
+                result = "입력값은 50보다 큽니다.";
+            }else if(num1 > 40 && num1 <= 50){
+                result = "입력값은 50이하 40초과의 범위에 존재합니다.";
+            }else if(num1 > 30 && num1 <= 40){
+                result = "입력값은 40이하 30초과의 범위에 존재합니다.";
+            }else if(num1 > 20 && num1 <= 30){
+                result = "입력값은 30이하 20초과의 범위에 존재합니다.";
+            }else{
+                result = "입력값은 20 이하입니다.";
+            }
+//  큰 틀에서부터 제거가 일어남
+            alert(result);
+            if(num1 > 50){
+                result = "입력값은 50보다 큽니다.";
+            }else if(num1 > 40){
+                result = "입력값은 50과 40 사이에 존재합니다.";
+            }else if(num1 > 30){
+                result = "입력값은 30과 40 사이에 존재합니다.";
+            }else if(num1 > 20){
+                result = "입력값은 20과 30 사이에 존재합니다.";
+            }else{
+                result = "입력값은 20 이하입니다.";
+            }
+ 
+            alert(result);
+        });
+    </script>
+</body>
+</html>

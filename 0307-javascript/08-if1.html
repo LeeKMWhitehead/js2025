@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if문</title>
+</head>
+<body>
+    <!-- input:number#num1[name="num1"]+button#btn{확인} -->
+    <input type="number" name="num1" id="num1">
+    <button id="btn">확인</button>
+ 
+    <script>
+        document.getElementById("btn").addEventListener("click", function(){
+            var input1 = parseInt(document.getElementById("num1").value);
+    // 단순 if문, 웹페이지상 아이디 입력 시 볼 수 있는 로직, 아이디 글자수 제한 즉 몇 자 이상 몇 자 이하 같은. 현재는 다른 방법도 많이 쓰지만 아직까지 if문도 많이 씀
+            if(input1 < 3){
+                alert("input1이 3보다 작다");
+            }
+            console.log("다음에 실행할 로직");
+        })
+    </script>
+</body>
+</html>

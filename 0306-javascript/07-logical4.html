@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>터부시하는 연산 예제</title>
+</head>
+<body>
+    <script>
+        var a=3;
+        var b=5;
+        console.log(((b++)<3)&&((a++)<5));
+        console.log(a) //? 3
+        console.log(b) //? 6
+        // 이것은 API에서 연산이 예측이 안 되기 때문에 쓰면 안 된다. 대입연산자까지 쓰면 폭망. 터부시 해야하는 내용임.
+        // Application Programming Interface
+    </script>
+</body>
+</html>

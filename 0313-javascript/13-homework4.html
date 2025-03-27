@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework4: deleting a particular attribute</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            padding: 20px;
+            display: inline-block;
+        }
+        .tooltip{
+            margin: 5px 0;
+            padding: 5px;
+            border: 5px dashed #888;
+        }
+    </style>
+</head>
+<!-- ### 문제 4. 특정 속성(attribute) 삭제하기
+- 문제 설명:   
+HTML 문서 내 클래스 `"tooltip"`을 가진 모든 요소들이 `title` 속성을 가지고 있습니다. 해당 요소들
+로부터 모두 `title` 속성을 삭제합니다. - 요구 사항:   
+1. `document.querySelectorAll`로 대상 요소들을 선택합니다.   
+2. 반복문을 돌며 각 요소에 대해 `removeAttribute` 메서드를 호출합니다.
+- 확장: 삭제 전후의 요소를 콘솔에 출력하여 변화를 확인합니다. ---  -->
+<body>
+    <div class="tooltip" title="타이틀 tooltip-1">tooltip element1</div>
+    <div class="tooltip" title="타이틀 tooltip-2">tooltip element2</div>
+    <div class="tooltip" title="타이틀 tooltip-3">tooltip element3</div>
+    <script>
+        console.log("삭제 전 요소 상태")
+        const items = document.querySelectorAll('.tooltip');
+            items.forEach(function(elem){
+                elem.removeAttribute('title');
+            });
+        console.log("모든 툴팁요소에서 title attribute가 삭제되었습니다.")
+
+    </script>
+</body>
+</html>

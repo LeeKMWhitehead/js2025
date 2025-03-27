@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단항연산자와 증감연산자</title>
+</head>
+<body>
+    <script>
+// 1
+var x1=3;
+console.log(-x1);// -3 단항부정
+
+// 2
+var x2="4";
+console.log(typeof (-x2));// x2는 문자열이었는데 -x2에 typeof를 붙이니까 number
+
+// 3
+var x3="3";
+console.log(x3);
+console.log(typeof +(x3)); // 단항양부호의 역할, 앞에 부호만 붙여도 숫자로 변함
+
+// 4
+console.log(+true); // 1
+console.log(+false); // 0
+console.log(+null); // 0
+console.log(null); // null
+console.log(-null); // -0
+console.log(+undefined); // NaN
+
+// 5
+var y1=3;
+// 증감연산자 특징: 연산이 앞에 나오면 연산 후 로직 수행
+// 연산이 뒤에 나여면 로직 수행 후 연산
+console.log(++y1); // 4 => y1=y1+1
+console.log(y1++); // 4
+console.log(y1); // 5
+
+var y2=5;
+console.log(--y2); //4
+console.log(y2--); //4
+console.log(y2); //3
+
+    </script>
+</body>
+</html>

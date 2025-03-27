@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>偶奇判別_Odd-Even Checker</title>    
+</head>
+<body>
+    <div>
+        <input type="text" id="txt1" name="txt1">
+        <button id="btn" onclick="determine()">Even/Odd?</button>
+    </div>
+    <script>
+        function determine(){
+        let a = parseInt(document.getElementById("txt1").value);
+        let b = parseInt(a % 2);
+        document.write(b == 0 ? "even number":"odd number");
+    }     
+    </script>
+</body>
+</html>

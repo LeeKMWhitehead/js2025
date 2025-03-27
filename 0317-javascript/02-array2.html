@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //length 속성
+        const arr1 =[1, 2, 3, "a", "b", "c"];
+        console.dir(arr1);
+        // length : 길이인가? 아이템 개수인가?
+        const arr2 =[0,1,2];
+        arr2[100]="a";
+        console.dir(arr2); // 101
+        // 아이템 개수가 아니라 길이다.
+        console.log(arr2);
+        const arr3 = [0, 1, 2];
+        arr3.length = 5;
+        console.dir(arr3);
+        console.log(arr3);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hoisting</title>
+</head>
+<body>
+    <script>
+        console.log(func1());
+        // console.log(func2());
+        // console.log(func2);
+                
+        function func1(){
+            return 'aaa';
+        }
+       
+        var func2 = function(){
+            return 'bbb';
+        }
+        var a1 = abcd;//전역에 영향을 끼치는 win에 저장되므로 var을 회피함. 전역 개체에 저장됨. 비슷한 원인으로 JQuery 사용자가 줄어듬
+
+        function 함수명(매개변수이름){
+            console.log("여기에 함수한테 시키싶은 일 : " + `${매개변수}`);
+        }
+ 
+        함수명('매개변수를 뺴라');
+    </script>
+</body>
+</html>

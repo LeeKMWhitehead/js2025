@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum_1^n</title>
+    <style>
+        div{
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<!-- • 입력: HTML <input> 태그를 이용해 사용자로부터 숫자 값을 입력받아 변수 n에 저장합니다. 
+(숫자형으로 변환) 
+• 출력: for 문을 사용하여 1부터 n까지의 합을 계산하고, alert("합계: " + sum)을 호출해 결과를 
+출력합니다. -->
+<body>
+    <input type="number" name="num1" id="num1" min="0">
+    <button id="btn">generating</button>
+    <div id="summation">SUMMATION FROM 1 TO n</div>
+        
+
+        <script>
+        document.getElementById("btn").addEventListener("click", function(){
+            var k=parseInt(document.getElementById("num1").value);
+            var sum=0;
+            var i;
+            for(i=1;i<=k; i++){
+                sum +=i ;                
+            }
+            var result= +sum;
+        document.getElementById("summation").innerHTML=result;
+        alert("합계:" +sum);
+        });
+        </script>
+
+
+</body>
+</html>

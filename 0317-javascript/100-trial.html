@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insertBefore/nextElementSibling</title>
+    <style>
+        #container{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<!-- insertBefore와 nextElementSibling 활용   
+문제 설명:   
+`<div id="container">` 내부에 `<div id="middle">Middle</div>` 요소가 있을 때, 그 앞쪽에 새로운 
+`<div>` 요소를 생성하여 "Before Middle" 텍스트를 추가하고 삽입합니다. 또한, 새로 삽입된 요소의 
+`nextElementSibling`을 확인합니다. 
+요구 사항:   - `document.getElementById`로 `container`와 `middle` 요소 선택
+- `document.createElement("div")` 및 `document.createTextNode("Before Middle")`로 새 요소 생성
+- `container.insertBefore(newElement, middle)`을 사용해 삽입
+- `newElement.nextElementSibling` 값을 활용하여 -->
+
+<body>
+
+<div id="container">
+    <div id="middle">Middle</div>
+</div>
+
+<div id="container">
+    <div id="middle">Middle</div>
+</div>
+
+<script> 
+// container와 middle 요소 선택 
+// 새로운 div 요소 생성하고 텍스트 추가 
+// middle 앞에 새로운 div 삽입 
+// newDiv의 nextElementSibling는 middle이어야 함 
+
+const container = document.getElementById("container");
+const middle = document.getElementById("middle");
+const newDiv = document.createElement("div");
+// newDiv.textContent = "Before Middle";
+container.insertBefore(newDiv, middle);
+
+console.log("newDiv.nextElementSibling:", newDiv.nextElementSibling.id); // 결과: "middle" 
+
+
+</script>
+
+<body>
+    
+</body>
+</html>

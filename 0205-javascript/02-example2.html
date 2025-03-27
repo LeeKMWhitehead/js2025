@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input1">
+    <input type="text" id="input2">
+    <button id="plus">더하기</button>
+    <h1 id="result"></h1>
+
+    <script>
+        // 계산기 만들기
+        // 0. 버튼 plus 를 누르는 이벤트를 작성한다.
+        document.getElementById("plus")
+        .addEventListener("click", function(){
+            // 1. 버튼 plus 를 누를 시 각각 input1과 input2에서 데이터를
+            // 가져온다.
+            var val1 = document.getElementById("input1").value;
+            var val2 = document.getElementById("input2").value;
+
+            // 2. 가져온 데이터를 숫자로 치환한다. parseInt()
+            val1 = parseInt(val1);
+            val2 = parseInt(val2);
+
+            // 3. 숫자로 치환한 두 데이터를 더한다.
+            var val3 = val1 + val2;
+
+            // 4. 더한 데이터를 h1 태그의 textContent에 삽입한다.
+            document.getElementById("result").textContent = val3;
+        });
+        
+        
+        
+        
+    </script>
+</body>
+</html>

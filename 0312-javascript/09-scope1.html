@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functionLevelScope 함수레벨 스코프</title>
+</head>
+<body>
+    <script>
+        var x= 'global';
+
+        function foo(){
+            var y= 'function scope';
+            console.log(x); // 전역변수 global variable
+            console.log(y); // function scope
+        }
+        
+        // foo 함수 호출
+        foo();
+        // foo 함수 호출
+        foo();
+        // foo 함수 호출
+        foo();
+        // foo 함수 또 호출
+        foo();
+        // foo 함수 계속 호출
+        foo();
+        // foo 함수 마지막 호출
+        foo();
+        console.log(x);
+
+    </script>
+</body>
+</html>

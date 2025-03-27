@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txt1" name="txt1">
+    <button id="btn">등록</button>
+    <ul id="ul1"></ul>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", function(){
+            var val1 = document.getElementById("txt1").value;
+            // document.getElementById("ul1").innerHTML = `<li>${val1}</li>`;
+            var li1 = document.createElement("li1");
+            li1.textContent = val1;
+            document.getElementById("ul1").append(li1);
+            // document.getElementById("ul1").prepend(li1);
+        });
+    </script>
+
+
+</body>
+</html>

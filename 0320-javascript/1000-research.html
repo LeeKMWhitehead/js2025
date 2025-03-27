@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>문제 1: 요소의 크기 계산(clientWidth vs. offsetWidth)</title>
+    <style>
+
+        #test-box{
+            width: 300px;
+            padding: 20px;
+            border: 5px solid black;
+            margin: 15px;
+            background-color: #f0f0f0;
+        }
+        #output{
+          margin-top: 20px;
+          font-family: monospace;
+        }
+    </style>
+  </head>
+  <body>
+
+    <h1>문제1: 요소의 크기 계산(clientWidth vs. offsetWidth)</h1>
+    <div id="test-box">이 박스의 크기를 측정합니다.</div>
+    <button id="measureBtn">크기측정</button>
+    <div id="output"></div>
+
+    <script>
+      
+
+document.getElementById("test-box").addEventListener("click", function(){
+    var box = document.getElementById("test-box");
+    var clientW = box.clientWidth;
+    var offsetW = box.offsetWidth;
+
+
+
+
+          var outputHTML ="clientWidth: " +clientW +"px<br>" +"offsetWidth: " +offsetW +"px<br><br>" +
+            "여기서  예상  결과는:<br>" +
+            "clientWidth: 300 + (20*2) = 340px<br>" +
+            "offsetWidth: 300 + (20*2) + (5*2) = 350px";
+          document.getElementById("output").innerHTML = outputHTML;
+          console.log("clientWidth:", clientW);
+          console.log("offsetWidth:", offsetW);
+        });
+    </script>
+  </body>
+</html>

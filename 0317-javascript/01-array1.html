@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 객체 object의 선언방식
+        const obj1 = {};
+        // 배열 array의 선언방식
+        const arr1 = [1, 2, 3];
+        // Everything human-made has reasons. There will be answers and explanations later. So wait!
+        const arr2 = [
+            1,
+            'abc',
+            2,
+            {a :1, b:'반갑습니다.'}
+        ]
+
+        //배열 단위호출
+        console.log(arr2[0]);
+        console.log(arr2[1]);
+        console.log(arr2[2]);
+        console.log(arr2[3]);
+        
+        //배열 통합호출
+        console.log(arr2);
+        console.dir(arr2);
+
+        // 배열 단위호출의 확장: 배열과 객체가 섞여 있을 경우 접근
+        console.log(arr2[3].a);
+
+    </script>
+</body>
+</html>

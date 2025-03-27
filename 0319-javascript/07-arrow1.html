@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow functions</title>
+</head>
+<body>
+    <script>
+        // 1 일단 익명함수부터 출발
+        const var1_1 = function(){
+            console.log("이것은 보통함수 var1-1");
+        };
+        const var1_2 = () => {
+            console.log("이것은 애로우함수 var1_2");
+        };
+        // 2
+        const var2_1 = function(){
+            return 1+2;
+        }
+
+        // const var2_2 = () => {
+        //     return 1+2;
+        // }
+
+        // 내용물이 리턴값만 있으니까 아래와 같이 써도 문제가 발생하지 않는다.
+        const var2_2 =() => 1+2;
+
+        // 3
+        const var3_1 = function(a){
+            console.log(a);
+        }
+
+        // 인자(parameter)가 하나만 들어갔을 때에는 이런 식으로 축약가능
+        // const var3_2 = (a) =>{
+        //     console.log(a);
+        // }
+        // 아래와 같이 더 줄일 수도 있다.
+        const var3_2 = a =>{
+            console.log(a);
+        }
+    </script>
+</body>
+</html>

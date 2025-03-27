@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제2: 버튼 클릭 시 배경색 변경하기</title>
+</head>
+<!-- ### 문제 2: 버튼 클릭 시 배경색 변경하기
+- 문제 개요: 버튼 클릭 이벤트를 활용하여 페이지의 배경색을 변경합니다.
+- 문제 설명: 사용자가 버튼을 클릭하면 전체 `<body>`의 배경색이 바뀌도록 합니다.
+- 구체적인 요구사항:
+- HTML 파일에 `<button id="changeColorBtn">배경색 변경</button>` 요소와 `<body>`가 있다고 가정합니다.
+- 버튼 클릭 시 문서의 배경색을 `"lightblue"`로 변경하는 JavaScript 코드를 작성하세요.  -->
+<body>
+    <button id="changeColorBtn">배경색 변경</button>
+    <script>
+        var btn = document.getElementById("changeColorBtn");
+        btn.addEventListener("click", function(){
+            document.body.style.backgroundColor = "lightblue";
+        });
+    </script>
+</body>
+</html>

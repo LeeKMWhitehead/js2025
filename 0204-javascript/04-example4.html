@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function func1(){
+            console.log("안녕하세요");
+        }
+
+        func1();
+
+        function func2(a){
+            console.log("a의 값은 : "+a);
+        }
+
+        func2(7); // a = 7
+
+        function func3(a, b){
+            console.log("a의 값은 : "+a);
+            console.log("b의 값은 : "+b);
+        }
+
+        func3(3, 5);
+
+        // function func4(a, b){
+        //     var c = a + b;
+        //     return c;
+        // }
+
+        var func4 = function(a, b){
+            var c = a + b;
+            return c;
+        }
+
+        var d = func4(5, 2);
+        console.log(d); // 7
+    </script>
+</body>
+</html>

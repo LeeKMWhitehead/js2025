@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>알쓸신잡shorthand2</title>
+</head>
+<body>
+    <script>
+    // suppose that there are data from a server-side as below
+    const obj1 ={
+        name : 'whitehead',
+        age: 19,
+        hobby: "facebooking",
+    }
+
+    // supppose that type you should take from a client
+    // {name, age, {hobby}}
+
+    // 가독성이 떨어지고 귀찮게 server_data.를 계속 달고 다녀야 함.
+    function send1(server_data){
+        const obj2 ={
+            name : server_data.name,
+            age : server_data.age,
+            hobby : {
+                hobby1 : server_data.hobby,
+            }
+        }
+        return obj2;
+    }
+
+    // 위의 형식과 비교해봐!
+    // function send1({name, age, hobby}){
+    //     const obj2 ={
+    //         name,
+    //         age,
+    //         hobby : {
+    //             hobby1 : hobby,
+    //         }
+    //     }
+    //     return obj2;
+    // }
+
+    const client = send1(obj1);
+    console.dir(client);
+</script>
+</body>
+</html>

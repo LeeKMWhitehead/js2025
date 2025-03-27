@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체란 무엇인가?</title>
+</head>
+<body>
+    <script>
+        // 객체란? in JavaScript
+        let a ="abc"; // 문자열
+        let b = 1234; // 숫자
+        // const obj ={};
+        // // 이거야! 그냥 brace 두 개 열고 닫고 한 것임. 이게 객체야.
+        // 앞으로 모든 infra structure, 모든 통신, 모든 data의 형태를 결정하는 등 여러 곳에 영향을 끼친다.
+        // 객체 안에 있는 모든 값들은 키와 밸류를 갖고 있다.
+        // 바로 아래처럼 속성과 기능이 들어있다.
+        const obj ={
+            val1 : "abc",
+            val2 : 1234,
+            func1 : function(){
+                console.log("안녕하세요?")
+            }
+        };
+        
+        let value1= "val1"
+        // 사용방법
+        console.log(obj.val1);
+        //abc 출력
+        console.log(obj[value1]);
+        //abc 출력
+        console.log(obj["val2"]);
+        // 값 형태가 무조건 문자열 아니면 숫자열이어야 함. 1234 출력
+        obj.func1();
+        // 안녕하세요?
+
+        // 객체 값 접근하는 법 : 객체명.key / 객체명["key"] / 객체명.매서드명() / 객체명["매서드명"]()
+    </script>
+</body>
+</html>

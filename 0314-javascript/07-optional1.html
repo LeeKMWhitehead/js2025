@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>알쓸신잡 optonal chaining</title>
+</head>
+<body>
+    <script>
+        const user ={
+            admin : {
+                name : "관리자",
+                // address : "DDC",
+            },
+        }
+
+        //console.log(user.admin.address); // undefined 원래는 address가 있었는데 주석처리해서 안 보이게 하고 설명함.
+        // 개발자가 정보가 다 있다고 가정하고 address정보를 찾고자 5일을 고민하고 있었는데 backend 개발자가 와서 어 원래 없었는데하고 말해주는 상황. 그 순간 개발자가 느끼는 곤혹감이란?
+        //console.log(user &&
+        //    user.admin &&
+        //    user.admin.address
+        //);
+        console.log(user?.admin?.address);
+        console.log(user.admin.address);
+        console.dir(user?.admin?.address);
+        console.dir(user.admin.address);
+        // ? 이 기호는 아주 효자를 본받은 기능을 갖고 있다. optional chaining
+        // 원래는 물음표 없이 출력시키면 undefined가 출력되지만 물음표를 달고 출력시키면 있는 부분까지만 출력하고 멈춤. 그러나 현장에서는 다른 대안이 많이 있고 시기상 늦었으므로 호응을 많이 얻지 못함
+
+        const user2 ={
+            admin(){
+                console.log("관리자 계정입니다.")
+            }
+        }
+        const user3 ={};
+        user2.admin?.();
+        user3.admin();
+        // 실제로 MDN에서 찾아보니 확인기능은 없고 에러방지만 하는 기능을 보여주고 있다. method의 오작동을 막는 기능
+    </script>
+</body>
+</html>

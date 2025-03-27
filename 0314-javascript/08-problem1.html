@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스 삽입삭제</title>
+    <style>
+        .mystyle {
+            width: 100%;
+            padding: 25px;
+            background-color: coral;
+            color: white;
+            font-size: 40px;
+            box-sizing: border-box;
+        }        
+    </style>
+</head>
+<!-- 클래스 삽입 삭제 -->
+ 
+<body>
+    <button id="add">디자인 삽입</button>
+    <button id="rmv">디자인 삭제</button>
+    <div id="myDiv">
+        This is a div element.<br> 
+        이 부분은 div 요소라구.
+    </div>
+
+    <script>
+        document.getElementById("add").addEventListener("click", function(){
+            const div = document.getElementById("myDiv");
+            div.classList.add("mystyle");
+        });
+        document.getElementById("rmv").addEventListener("click", function(){
+            const div = document.getElementById("myDiv");
+            div.classList.remove("mystyle");
+        });
+
+    </script>
+ 
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 문제 4: 입력 값 실시간 반영하기
+- 문제 개요: 입력 필드에서 타이핑한 내용을 실시간으로 다른 요소에 반영합니다.
+- 문제 설명: 사용자가 입력하는 즉시 해당 값이 화면에 표시되도록 합니다.
+- 구체적인 요구사항:
+- HTML 파일에 `<input type="text" id="textInput" placeholder="문자 입력">`와
+ `<span id="displayText"></span>`가 있습니다.
+- 사용자가 입력 필드에 타이핑할 때마다, 입력된 값을 `displayText` 요소에 바로 업데이트하는 코드를 작성하세요.
+- 힌트: `input` 이벤트와 `.value` 속성을 사용하세요. -->
+<body>
+    <input type="text" id="textInput" placeholder="string input">
+    <span id="displayText"></span>
+    <script>
+        var textInput = document.getElementById("textInput");
+        var displayText = document.getElementById("displayText");
+        textInput.addEventListener("input", function(){
+            displayText.textContent = textInput.value;
+        });
+    </script>
+</body>
+</html>

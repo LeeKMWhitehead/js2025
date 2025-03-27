@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forinStatements</title>
+</head>
+<!-- 키셋을 기준으로 전부 순회하게 만들 수 있다. -->
+<body>
+    <script>
+        // 1
+        const obj1={
+            prop1 : "속성1",
+            prop2 : "속성2",
+            prop3 : "속성3",
+            prop4 : "속성4",
+        }
+        
+        for (let i=1; i<=4; i++){
+            console.log(obj1["prop"+i]);
+        }
+
+
+        const obj2={
+            prop1 : "속성1",
+            prop : "속성2",
+            prop8 : "속성3",
+            prop4 : "속성4",
+        }
+
+        // 순회할 때 쓰는 것이 forin문임.
+        for(key in obj2){
+            console.log(key);
+        }
+        for(key in obj2){
+            console.log(key);
+            console.log(obj2[key]) //가변적으로 들어가는 data값은 []를 사용함
+        }
+
+        // console.log(obj1["prop"+i])처럼 obj1이 필요없다. 짧게짧게 쓰는 용도로만 사용. 이때 사용하는 구문이 with문
+        // 복잡하고 길어지면 유지보수가 힘들어짐.
+        with(obj2){
+            console.log(`${prop}`);
+            console.log(`${prop1}`);
+        }
+    </script>
+</body>
+</html>

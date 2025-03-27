@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 18장 arraingment -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 1 object spread operation
+    // => 삽입 연산
+    // const obj1 ={
+    //     a1 : 111,
+    //     b1 : "abc"
+    // };
+    // const obj2 ={...obj1, c1 : 345};
+    // {a1 : 111, b1 : "abc"}
+    // console.log(obj1);
+    // // {a1 : 111, b1 : "abc", c1 : 345} javascript object 자바스크립트 객체
+    // console.log(obj2);
+    // // {a1 : 111, b1 : "abc", c1 : 345}
+    // console.log({...obj1, c1:345});
+
+    // 2. 부분추출 1
+    const obj2_1 ={
+        // a1 : 123,
+        // b1 : "abc"
+    };
+    
+    // let {a1, b1} = obj2_1;
+    // console.log(`${a1} ${b1}`); // 123 abc
+
+
+    // 3. 부분추출 2
+    const obj3_1 = {
+        // a1 : 123,
+        // b1 : "abc"
+    };
+
+    // let {a1:c1, b1:d1} =obj2_1;
+    // console.log(`${c1} ${d1}`); // 123 abc
+
+    // 4. 부분추출 3
+    // const obj4_1 ={
+    //     a1 : 123,
+    //     b1 : "abc"
+    // };
+
+    // let a1, b1;
+
+    // ({a1, b1} = obj4_1);
+    // // compile error를 막기 위해 (   )를 씌워줌. 블록 코드가 아닌 객체 그 자체를 인지시켜주기 위해
+    // console.log(`${a1} ${b1}`); // 123 abc
+
+    // 5. 부분추출 4
+    // const obj5_1 ={
+    //     a1 : 123,
+    //     b1 : "abc",
+    //     c1 : {
+    //         c1_1 : 10,
+    //         c1_2 : "z"
+    //     },
+    // };
+    // let {a1, b1, c1 : {c1_1}} = obj5_1;
+    // console.log(`${a1} ${b1} ${c1_1}`); // 123 abc 10
+
+    // 6. 부분추출 5
+    // const obj6_1 ={
+    //     a1 : 123,
+    //     b1 : "abc",
+    //     c1 : {
+    //         c1_1 : 10,
+    //         c1_2 : "z"
+    //     },
+    // };
+    // let {a1, ...rest1} = obj6_1;
+    // rest1 is arbitrary by KGH.
+    // console.log(a1); // 123
+    // // {b1:"abc", c1:{c1_1 : 10, c1_2 ; "z"}}
+    // console.dir(rest1);
+
+    // 7. 요소 수정 1
+    // const obj7_1 ={
+    //     a1 : 123,
+    //     b1 : "abc"
+    // };
+
+    // const obj7_2 = {...obj7_1, a1 :987 };
+
+    // console.log(obj7_1); // {a1 : 123, b1 : "abc"}
+    // console.log(obj7_2); // {a1 : 987, b1 : "abc"}
+
+    // 8. 요소 삭제 1
+    const obj7_1 ={
+        a1 : 123,
+        b1 : "abc",
+        c1 : 456
+    }
+
+    const {a1, ...rest1} =obj7_1;
+    console.dir(rest1); // {b1: "abc", c1:456}
+
+    let {b1, c1} =obj7_1;
+    const obj7_2 ={b1, c1};
+    console.dir(obj7_2);
+
+
+    </script>
+</body>
+</html>

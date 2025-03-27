@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제1: appendChild 요소 추가</title>
+    <style>
+        div{
+            border: 2px solid black ;
+        }
+    </style>
+</head>
+<!-- 문제 1. appendChild를 이용한 요소 추가   
+문제 설명:   
+HTML 내 `<ul id="list">` 안에 새로운 `<li>` 요소를 추가하여 "Item 4" 텍스트를 표시합니다. 
+요구 사항:   - `document.getElementById`를 사용해 `list` 요소 선택
+- `document.createElement("li")`로 새로운 `<li>` 생성
+- `document.createTextNode("Item 4")`를 이용하여 텍스트 노드 생성 후 `<li>`에 추가
+- `list.appendChild(newElement)`를 사용해 `<li>` 요소 삽입    -->
+<body>
+    <div>
+        <ul id="list">
+            <li id="item1" txt="item 1">항목 1</li>
+            <li id="item2" txt="item 2">항목 2</li>
+            <li id="item3" txt="item 3">항목 3</li>
+        </ul>
+    </div>
+
+    <button id="btn1">li 추가</button>
+    
+    <script>
+        document.getElementById("btn1").addEventListener("click", function(){
+            document.getElementById
+            const li = document.createElement("li")
+            li.textContent 
+            document.querySelector("#Item 3").after(li)
+
+        })
+    </script>
+
+</body>
+</html>
+
+<!DOCTYPE html> 
+<html lang="ko"> 
+<head> 
+<meta charset="UTF-8"> 
+<title>문제 1: appendChild</title> 
+</head> 
+<body> 
+<ul id="list"> 
+<li>Item 1</li> 
+<li>Item 2</li> 
+<li>Item 3</li> 
+</ul> 
+<script> 
+// list 요소 선택 
+const list = document.getElementById("list"); 
+// 새로운 li 요소 생성 
+const newListItem = document.createElement("li"); 
+// 텍스트 노드 추가 (간단하게 textContent 사용) 
+newListItem.textContent = "Item 4"; 
+// li 요소를 list의 맨 뒤에 추가 
+list.appendChild(newListItem); 
+</script> 
+</body> 
+</html>
+

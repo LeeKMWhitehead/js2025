@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScoreGradeEvaluator</title>
+</head>
+
+<!-- 2-2. 점수 등급 평가 (Score Grade Evaluator) 
+목표: 
+• 사용자가 입력한 점수를 기반으로 등급(A, B, C, D, F)을 계산하기 
+• 연산자를 사용해 조건별 결과를 도출하고, DOM으로 출력하기 
+요구사항: 
+• HTML에 점수(0~100) 입력 필드, "등급 확인" 버튼, 결과 표시 영역을 만듭니다. 
+• 버튼 클릭 시 입력한 점수가 숫자인지 확인하고, 다음 조건에 따라 등급을 부여합니다: 
+o 90 이상 → A 
+o 80 이상 → B 
+o 70 이상 → C 
+o 60 이상 → D 
+o 그 미만 → F 
+• 삼항 연산자를 활용하여 등급 메시지를 생성합니다. 
+• 결과 영역에 "당신의 점수는 85점이며, 등급은 B입니다."와 같은 형식으로 결과를 출력합니다.  -->
+
+
+<body>
+    <div>
+        <input type="text" id="grade1" name="garde1">
+        <button id="btn" onclick="evaluator()">"What is Your Grade?"</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        function evaluator(){
+            let a = parseInt(document.getElementById("grade1").value);
+            document.write(a >= 90 ? a >= 80 ? a >= 70 ? a >= 60 ? "A" : "B" :"C":"D":"F");
+        }
+    </script>
+</body>
+</html>
